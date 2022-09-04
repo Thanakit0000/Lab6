@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function summm() {
+            var n1 = Number(document.getElementById("num1").value);
+            var n2 = Number(document.getElementById("num2").value);
+            var sum = Number(document.getElementById("sum").value);
+            console.log(sum);
+            num3.value = sum == 1 ? n1 + n2 : sum == 2 ? n1 - n2 : sum == 3 ? n1 * n2 : n1 / n2;
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <input type="text" id="num1" size="10">
+        <select name="list" id="sum">
+            <option value="1"> + </option>
+            <option value="2"> - </option>
+            <option value="3"> * </option>
+            <option value="4"> / </option>
+        </select>
+        <input type="text" id="num2" size="10"> =
+        <input type="text" id="num3" size="10" value="">
+        <input type="button" id="gogo" value="Compute" onclick="summm()">
+    </form>
+
+</body>
+
+</html>

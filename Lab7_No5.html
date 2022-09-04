@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addTB(){
+            var name2 = document.getElementById("name");
+            var name1 = name2.value;
+            // console.log(name1);
+            
+            var adddess2 = document.getElementById("addess");
+            var adddess1 = adddess2.value;
+            // console.log(adddess1);
+
+            var tol2 = document.getElementById("tol");
+            var tol1 = tol2.value;
+            // console.log(tol1);
+
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+
+            td1.innerHTML=name1;
+            // console.log(td1);
+            td2.innerHTML=adddess1;
+            // console.log(td2);
+            td3.innerHTML=tol1;
+            // console.log(td3);
+
+            let tr1 = document.createElement("tr");
+            tr1.appendChild(td1);
+            tr1.appendChild(td2);
+            tr1.appendChild(td3);
+
+            main.appendChild(tr1);
+        }
+    </script>
+</head>
+<body>
+
+    <form>
+        ชื่อลูกค้า :<input type="text" id="name"><br>
+        ที่อยู่ :<input type="text" id="addess"><br>
+        โทรศัพท์ :<input type="text" id="tol"><br>
+        <input type="button" id="add" value="เพิ่ม" onclick="addTB()">
+    </form><br>
+    <table border="1" id="main">
+        <tr>
+            <th>ชื่อลูกค้า</th>
+            <th>ที่อยู่</th>
+            <th>โทรศัพท์</th>
+        </tr>
+
+    </table>
+</body>
+</html>
